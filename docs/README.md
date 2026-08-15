@@ -1,8 +1,8 @@
-# Project Name
+# Proper Typing Test
 
 ## Overview
 
-Brief description.
+Proper Typing Test is a web app that provides tests to measure your typing speed.
 
 ## Features
 
@@ -11,13 +11,9 @@ Brief description.
 
 ## Tech Stack
 
-- Python
-- Flask
-- PostgreSQL
-
-## Installation Guide
-
-Instructions here.
+- HTML
+- CSS
+- JavaScript
 
 ## Screenshots
 
