@@ -1,0 +1,24 @@
+/* ---- Reset / base ---- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* ---- Layout ---- */
+header,
+main,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ---- Components ---- */
+/* Add component-specific styles below as the project grows */

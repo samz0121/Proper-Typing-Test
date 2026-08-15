@@ -1,3 +1,3 @@
-## [insert date]
-- Added feature 1
-- Added feature 2
+## 8/14/2026
+- Set up the basic project structure
+- Wrote the basic skeletal code in src
