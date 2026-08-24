@@ -9,3 +9,7 @@
 ## 8/23/2026
 - Modified padding and colour
 - fixed footer to the bottom of the page
+
+## 8/24/2026
+- Modified HTML and CSS structuring, simplifying input detection
+- Added basic user input detection in the JS side
