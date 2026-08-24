@@ -44,11 +44,18 @@ h1 {
   color: var(--text-colour)
 }
 
-#typing-prompt {
+#display {
   font-size: 1.5rem;
-  padding: 0.5em 1em 0.55em 1em;
+  padding: 0.5em 1em 0.5em 1em;
 
   color: var(--text-colour);
   background-color: var(--block-colour);
   border-radius: 1em;
+}
+
+#hidden-input {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
 }

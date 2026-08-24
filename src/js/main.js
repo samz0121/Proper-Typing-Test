@@ -7,7 +7,7 @@ function init() {
   console.log('App initialized');
 
   // DOM elements
-  const prompt = document.getElementById("typing-prompt");
+  const prompt = document.getElementById("hidden-input");
 
   // variables for typing logic
   let sampleText = "the quick brown fox jumps over the lazy dog";
