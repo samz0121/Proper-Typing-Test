@@ -8,6 +8,8 @@ function init() {
 
   // DOM elements
   const prompt = document.getElementById("hidden-input");
+  const display = document.getElementById("display");
+  const clickZone = document.getElementById("click-zone");
 
   // variables for typing logic
   let sampleText = "the quick brown fox jumps over the lazy dog";
@@ -16,7 +18,7 @@ function init() {
   console.log(sampleText);
 
   function render() {
-
+    display.innerHTML = inputText;
   }
 
   function handleInput(e) {
@@ -24,10 +26,12 @@ function init() {
     let char = text[text.length - 1];
 
     inputText += char
-
     console.log(inputText);
+
+    render();
   }
 
+  clickZone.addEventListener("click", () => prompt.focus());
   prompt.addEventListener("input", handleInput);
   
 }
