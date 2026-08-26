@@ -20,3 +20,8 @@
 - Rough implementation of rendering text
 - Implemented user input for typing
 - Added colours representing the states of each character (correct, wrong, upcoming, current)
+
+## 8/26/2026
+- Roughly implemented backspace
+- Fixed text rendering glitches
+- Added a rough win screen

@@ -9,7 +9,7 @@
   --upcoming-colour: rgb(125, 125, 106);
   --current-colour: rgb(71, 71, 59);
   --correct-colour: rgb(56, 188, 38);
-  --wrong-colour: rgb(153, 37, 37);
+  --wrong-colour: rgba(211, 30, 30, 0.34);
 }
 
 /* ---- Reset / base ---- */
@@ -81,7 +81,7 @@ h1 {
 }
 
 .text--wrong {
-  color: var(--wrong-colour);
+  background-color: var(--wrong-colour);
 }
 
 .test--display {
@@ -91,4 +91,9 @@ h1 {
   color: var(--text-colour);
   background-color: var(--block-colour);
   border-radius: 1em;
+}
+
+#test--win {
+  visibility: hidden;
+  background-color: green;
 }
