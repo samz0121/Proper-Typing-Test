@@ -12,25 +12,22 @@ function init() {
   const clickZone = document.getElementById("click-zone");
 
   // variables for typing logic
-  let sampleText = "the quick brown fox jumps over the lazy dog";
+  let sampleText = "the quick";
   let targetText = sampleText;
   let inputText = "";
-  let displayText = "";
   let index = 0;
 
   function render() {
     let correctChars = targetText.slice(0, index);
     let wrongChars = inputText.slice(index, inputText.length);
     let upcomingChars = targetText.slice(index + 1, targetText.length);
-    let currentChar;
+    let currentChar = "";
     if (wrongChars === "") {
       currentChar = targetText[index];
+      console.log(currentChar)
     }
     
-    display.innerHTML = `<span class="text--correct">${correctChars}</span>
-                          <span class="text--current">${currentChar}</span>
-                          
-                          <span class="text--upcoming">${upcomingChars}</span>`;
+    display.innerHTML = `<span class="text--correct">${correctChars}</span><span class="text--current">${currentChar}</span><span class="text--wrong">${wrongChars}</span><span class="text--upcoming">${upcomingChars}</span>`;
   }
 
   function handleInput(e) {

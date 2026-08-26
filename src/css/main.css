@@ -83,3 +83,12 @@ h1 {
 .text--wrong {
   color: var(--wrong-colour);
 }
+
+.test--display {
+  font-size: 1.5rem;
+  padding: 0.5em 1em 0.5em 1em;
+
+  color: var(--text-colour);
+  background-color: var(--block-colour);
+  border-radius: 1em;
+}
