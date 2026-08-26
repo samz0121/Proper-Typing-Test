@@ -7,6 +7,7 @@
   --text-colour: rgb(61, 61, 53);
 
   --upcoming-colour: rgb(125, 125, 106);
+  --current-colour: rgb(71, 71, 59);
   --correct-colour: rgb(56, 188, 38);
   --wrong-colour: rgb(153, 37, 37);
 }
@@ -64,6 +65,11 @@ h1 {
   height: 1px;
   width: 1px;
   opacity: 0;
+}
+
+.text--current {
+  color: var(--current-colour);
+  text-decoration: underline;
 }
 
 .text--upcoming {

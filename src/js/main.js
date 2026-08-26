@@ -15,12 +15,22 @@ function init() {
   let sampleText = "the quick brown fox jumps over the lazy dog";
   let targetText = sampleText;
   let inputText = "";
+  let displayText = "";
   let index = 0;
 
   function render() {
-    for (let char of targetText) {
+    let correctChars = targetText.slice(0, index);
+    let wrongChars = inputText.slice(index, inputText.length);
+    let upcomingChars = targetText.slice(index + 1, targetText.length);
+    let currentChar;
+    if (wrongChars === "") {
+      currentChar = targetText[index];
     }
-    display.innerHTML = targetText;
+    
+    display.innerHTML = `<span class="text--correct">${correctChars}</span>
+                          <span class="text--current">${currentChar}</span>
+                          
+                          <span class="text--upcoming">${upcomingChars}</span>`;
   }
 
   function handleInput(e) {
