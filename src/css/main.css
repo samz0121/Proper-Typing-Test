@@ -1,8 +1,14 @@
+/* BEM: block__element--modifier */
+
 :root {
   --ivory-mist: #f8f4e3ff;
   --backdrop-colour: #d4cdc3ff;
   --block-colour: rgb(194, 181, 174);
   --text-colour: rgb(61, 61, 53);
+
+  --upcoming-colour: rgb(125, 125, 106);
+  --correct-colour: rgb(56, 188, 38);
+  --wrong-colour: rgb(153, 37, 37);
 }
 
 /* ---- Reset / base ---- */
@@ -58,4 +64,16 @@ h1 {
   height: 1px;
   width: 1px;
   opacity: 0;
+}
+
+.text--upcoming {
+  color: var(--upcoming-colour);
+}
+
+.text--correct {
+  color: var(--correct-colour);
+}
+
+.text--wrong {
+  color: var(--wrong-colour);
 }
