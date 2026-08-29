@@ -28,6 +28,3 @@
 
 ## 8/29/2026
 - Finished user input and text rendering
-
-### test
-- test feature
