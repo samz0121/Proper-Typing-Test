@@ -97,3 +97,24 @@ h1 {
   visibility: hidden;
   background-color: green;
 }
+
+#state--game {
+  display: none;
+}
+
+#state--win {
+
+}
+
+.stats-tile {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-tile__subtile{
+  display: flex;
+}
+
+.win__button--retry {
+  
+}

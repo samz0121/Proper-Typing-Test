@@ -1,37 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Project</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/main.js" defer></script> <!-- defer is used so that the script runs only when all DOM elements are parsed -->
+  <script src="js/main.js" defer></script>
+  <!-- defer is used so that the script runs only when all DOM elements are parsed -->
 </head>
+
 <body>
 
   <header>
-    <h1>Typing Game</h1>
+    <h1>[Name WIP]</h1>
   </header>
 
   <main>
-    <div id="click-zone">
-      <div id="display"></div>
-      <input
-        id="hidden-input"
-        type="text"
-        autocomplete="false"
-        autocapitalize="false"
-        spellcheck="false"
-      />
+    <div id="state--game">
+      <div id="click-zone">
+        <div id="display"></div>
+        <input id="hidden-input"
+              type="text"
+              autocomplete="false"
+              autocapitalize="false"
+              spellcheck="false"
+        />
+      </div>
+      <br>
+      <div id="test--win">You win</div>
     </div>
 
-    <br>
-    <div id="test--win">You win</div>
-    <span>bro         d   bro</span>
+    <div id="state--win">
+      <h2>Congratulations!</h2>
+      <h3>Results and stuff</h3>
+
+      <div class="stats-tile"> <!-- use a <ul> maybe? -->
+        <div class="stats-tile__subtile">
+          <p>WPM: 0</p>
+          <p>ACC: 0%</p>
+        </div>
+        <div class="stats-tile__subtile">
+          <p>Time: 0</p>
+          <p>Test type: null</p>
+        </div>
+      </div>
+
+      <input class="win__button--retry" type="button" value="Try Again" onclick="console.log('crodie')">
+    </div>
+
   </main>
 
   <footer>
     <p>&copy; 2026</p>
   </footer>
 </body>
+
 </html>
