@@ -1,8 +1,15 @@
+/* BEM: block__element--modifier */
+
 :root {
   --ivory-mist: #f8f4e3ff;
   --backdrop-colour: #d4cdc3ff;
   --block-colour: rgb(194, 181, 174);
   --text-colour: rgb(61, 61, 53);
+
+  --upcoming-colour: rgb(125, 125, 106);
+  --current-colour: rgb(71, 71, 59);
+  --correct-colour: rgb(56, 188, 38);
+  --wrong-colour: rgba(211, 30, 30, 0.34);
 }
 
 /* ---- Reset / base ---- */
@@ -44,11 +51,49 @@ h1 {
   color: var(--text-colour)
 }
 
-#typing-prompt {
+#display {
   font-size: 1.5rem;
-  padding: 0.5em 1em 0.55em 1em;
+  padding: 0.5em 1em 0.5em 1em;
 
   color: var(--text-colour);
   background-color: var(--block-colour);
   border-radius: 1em;
+}
+
+#hidden-input {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+}
+
+.text--current {
+  color: var(--current-colour);
+  text-decoration: underline;
+}
+
+.text--upcoming {
+  color: var(--upcoming-colour);
+}
+
+.text--correct {
+  color: var(--correct-colour);
+}
+
+.text--wrong {
+  background-color: var(--wrong-colour);
+}
+
+.test--display {
+  font-size: 1.5rem;
+  padding: 0.5em 1em 0.5em 1em;
+
+  color: var(--text-colour);
+  background-color: var(--block-colour);
+  border-radius: 1em;
+}
+
+#test--win {
+  visibility: hidden;
+  background-color: green;
 }
