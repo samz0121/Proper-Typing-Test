@@ -25,3 +25,6 @@
 - Roughly implemented backspace
 - Fixed text rendering glitches
 - Added a rough win screen
+
+## 8/29/2026
+- Finished user input and text rendering

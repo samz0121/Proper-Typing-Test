@@ -18,18 +18,19 @@ function init() {
   let inputText = "";
 
   let programState = "game";
-  let slow = 0;
-  let fast = 0;
+  let index = 0;
 
   function render() {
-    let correctChars = targetText.slice(0, slow);
-    let wrongChars = inputText.slice(slow, inputText.length);
-    let upcomingChars = targetText.slice(slow + 1, targetText.length);
+    let correctChars = targetText.slice(0, index);
+    let wrongChars = targetText.slice(index, inputText.length);
+    let upcomingChars = "";
     let currentChar = "";
-    if (wrongChars === "" && slow !== targetText.length) {
-      currentChar = targetText[slow];
+    if (wrongChars === "" && index !== targetText.length) {
+      currentChar = targetText[index];
+      upcomingChars = targetText.slice(index + 1, targetText.length);
+    } else {
+      upcomingChars = targetText.slice(inputText.length, targetText.length);
     }
-    console.log(currentChar);
     
     display.innerHTML = `<span class="text--correct">${correctChars}</span><span class="text--current">${currentChar}</span><span class="text--wrong">${wrongChars}</span><span class="text--upcoming">${upcomingChars}</span>`;
   }
@@ -37,26 +38,22 @@ function init() {
   function handleInput(e) {
     inputText = e.target.value;
 
-    if (e.inputType === "deleteContentBackward") {
-      fast -= 2;
+    if (inputText.slice(0, index + 1) === targetText.slice(0, index + 1)) {
+      ++index;
     }
 
-    if (inputText.slice(0, slow + 1) === targetText.slice(0, slow + 1)) {
-      ++slow;
-    }
-    ++fast;
-
-    if (slow > fast) {
-      --slow;
+    if (index > inputText.length) {
+      --index;
+      console.log("deleting correct words rn")
     }
 
-    if (slow >= targetText.length) {
+    if (index >= targetText.length) {
       console.log("You win");
       testWin.style.visibility = "visible";
       // TODO: terminate program
     }
 
-    console.log(slow, fast, inputText);
+    console.log(index, inputText);
 
     render();
   }
