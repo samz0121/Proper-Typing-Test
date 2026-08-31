@@ -33,20 +33,16 @@
 
     <div id="state--win">
       <h2>Congratulations!</h2>
-      <h3>Results and stuff</h3>
+      <h3>Test Results:</h3>
 
       <div class="stats-tile"> <!-- use a <ul> maybe? -->
-        <div class="stats-tile__subtile">
-          <p>WPM: 0</p>
-          <p>ACC: 0%</p>
-        </div>
-        <div class="stats-tile__subtile">
-          <p>Time: 0</p>
-          <p>Test type: null</p>
-        </div>
+        <p id="wpm">WPM: 0</p>
+        <p id="acc">ACC: 0%</p>
+        <p id="test-time">Time: 0</p>
+        <p id="test-type">Test type: null</p>
       </div>
 
-      <input class="win__button--retry" type="button" value="Try Again" onclick="console.log('crodie')">
+      <button id="button--restart" onclick="console.log('bro')">Try Again</button>
     </div>
 
   </main>
