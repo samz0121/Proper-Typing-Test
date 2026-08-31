@@ -7,18 +7,52 @@ function init() {
   console.log('App initialized');
 
   // DOM elements
+  const gameScreen = document.getElementById("state--game");
+  const winScreen = document.getElementById("state--win");
+  const errorScreen = document.getElementById("state--error");
+
   const prompt = document.getElementById("hidden-input");
   const display = document.getElementById("display");
   const clickZone = document.getElementById("click-zone");
-  const testWin = document.getElementById("test--win");
+  const restartButton = document.getElementById("button--restart");
 
   // variables for typing logic
+  let programState = "game";
+
   let sampleText = "the quick brown fox jumps over the lazy dog";
   let targetText = sampleText;
-  let inputText = "";
+  let inputText;
+  let index;
 
-  let programState = "game";
-  let index = 0;
+  function clearDisplay() {
+    gameScreen.style.display = "none";
+    winScreen.style.display = "none";
+    errorScreen.style.display = "none";
+  }
+
+  function updateDisplay() {
+    clearDisplay();
+    
+    switch(programState) {
+      case "game":
+        gameScreen.style.display = "flex";
+        break;
+      case "win":
+        winScreen.style.display = "flex";
+        break;
+      default:
+        errorScreen.style.display = "flex";
+    }
+  }
+
+  function resetGame() {
+    index = 0;
+    inputText = "";
+    // TODO: update targetText to something new
+
+    prompt.value = "";
+    render();
+  }
 
   function render() {
     let correctChars = targetText.slice(0, index);
@@ -42,15 +76,17 @@ function init() {
       ++index;
     }
 
-    if (index > inputText.length) {
+    // while also catches ctrl + backspace case
+    while (index > inputText.length) {
       --index;
       console.log("deleting correct words rn")
     }
 
     if (index >= targetText.length) {
       console.log("You win");
-      testWin.style.visibility = "visible";
-      // TODO: terminate program
+      programState = "win";
+      updateDisplay();
+      // TODO: make sure the program is terminating properly
     }
 
     console.log(index, inputText);
@@ -58,8 +94,17 @@ function init() {
     render();
   }
 
+  restartButton.addEventListener("click", () => {
+    programState = "game";
+    resetGame();
+    updateDisplay();
+    console.log(index, inputText, "what the fuck is going on");
+    // TODO: make sure the program is restarting properly
+  });
+
   clickZone.addEventListener("click", () => prompt.focus());
   prompt.addEventListener("input", handleInput);
 
-  render();
+  resetGame();
+  updateDisplay();
 }

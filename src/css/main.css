@@ -1,9 +1,10 @@
 /* BEM: block__element--modifier */
 
 :root {
-  --ivory-mist: #f8f4e3ff;
   --backdrop-colour: #d4cdc3ff;
   --block-colour: rgb(194, 181, 174);
+  --button-color: rgb(192, 157, 138);
+  --hover-color: rgb(169, 114, 84);
   --text-colour: rgb(61, 61, 53);
 
   --upcoming-colour: rgb(125, 125, 106);
@@ -94,6 +95,65 @@ h1 {
 }
 
 #test--win {
-  visibility: hidden;
+  display: none;
   background-color: green;
+}
+
+#state--game {  /* TODO: check if this is being centered properly */
+  display: flex;
+  flex-direction: column;
+}
+
+#state--win {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#state--win h2 {
+  font-size: 3rem;
+}
+
+#state--win h3 {
+  font-size: 2rem;
+}
+
+.stats-tile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5em;
+  padding: 1em;
+}
+
+.stats-tile p {
+  font-size: 2rem;
+  text-align: center;
+
+  background-color: var(--block-colour);
+  border-radius: 0.5em;
+  padding: 0.25em;
+}
+
+#state--win button {
+  font-size: 2rem;
+  font-weight: bold;
+
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  border: none;
+
+  cursor: pointer;
+}
+
+#button--restart {
+  background-color: var(--button-color);
+}
+
+#button--restart:hover {
+  background-color: var(--hover-color);
+}
+
+#click-zone {
+  cursor: pointer;
 }

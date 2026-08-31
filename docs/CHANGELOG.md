@@ -28,3 +28,10 @@
 
 ## 8/29/2026
 - Finished user input and text rendering
+- Created the basic html elements for the win screen
+
+## 8/30/2026
+- Completed a rough win screen
+- Fixed ctrl + backspace
+- Added error screen
+- Implemented winning when test terminates
