@@ -32,3 +32,6 @@
 
 ## 8/30/2026
 - Completed a rough win screen
+- Fixed ctrl + backspace
+- Added error screen
+- Implemented winning when test terminates

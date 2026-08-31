@@ -22,13 +22,11 @@
         <div id="display"></div>
         <input id="hidden-input"
               type="text"
-              autocomplete="false"
-              autocapitalize="false"
+              autocomplete="off"
+              autocapitalize="off"
               spellcheck="false"
         />
       </div>
-      <br>
-      <div id="test--win">You win</div>
     </div>
 
     <div id="state--win">
@@ -43,6 +41,10 @@
       </div>
 
       <button id="button--restart" onclick="console.log('bro')">Try Again</button>
+    </div>
+
+    <div id="state--error">
+      <h1>Something went wrong</h1>
     </div>
 
   </main>

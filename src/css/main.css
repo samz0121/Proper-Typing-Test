@@ -95,16 +95,18 @@ h1 {
 }
 
 #test--win {
-  visibility: hidden;
+  display: none;
   background-color: green;
 }
 
-#state--game {
-  display: none;
+#state--game {  /* TODO: check if this is being centered properly */
+  display: flex;
+  flex-direction: column;
 }
 
 #state--win {
-  display: flex;
+  /* display: flex; */
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -150,4 +152,8 @@ h1 {
 
 #button--restart:hover {
   background-color: var(--hover-color);
+}
+
+#click-zone {
+  cursor: pointer;
 }
