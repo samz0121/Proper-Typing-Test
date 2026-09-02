@@ -63,8 +63,8 @@ h1 {
 
 #hidden-input {
   position: absolute;
+  cursor: default;
   height: 1px;
-  width: 1px;
   opacity: 0;
 }
 

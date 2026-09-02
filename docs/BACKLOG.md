@@ -7,6 +7,7 @@
 ## Next Up
 - P2: Varied Typing Tests
 - P2: Settings and options
+- P3: Polish Page Structure and Styling
 - P3: Animations
 - P3: Sound Effects
 
