@@ -39,3 +39,4 @@
 ## 9/6/2026
 - Added file parsing
 - Fully implemented randomized tests
+- Minor bug fixes & optimization
