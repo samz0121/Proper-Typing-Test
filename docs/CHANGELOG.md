@@ -35,3 +35,7 @@
 - Fixed ctrl + backspace
 - Added error screen
 - Implemented winning when test terminates
+
+## 9/6/2026
+- Added file parsing
+- Fully implemented randomized tests

@@ -1,7 +1,6 @@
 # Backlog
 
 ## In Progress
-- P1: Randomized Tests
 - P1: Results Calculation (WPM, ACC, etc.)
 
 ## Next Up

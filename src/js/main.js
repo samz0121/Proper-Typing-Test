@@ -20,7 +20,7 @@ async function init() {
   const testLength = 20;
   let programState = "game";
 
-  let targetText = await makeTest(testLength);
+  let targetText;
   let inputText;
   let index;
 
@@ -45,10 +45,11 @@ async function init() {
     }
   }
 
-  function resetGame() {
+  async function resetGame() {
     index = 0;
     inputText = "";
     // TODO: update targetText to something new
+    targetText = await makeTest(testLength);
 
     prompt.value = "";
     render();
@@ -79,11 +80,9 @@ async function init() {
     // while also catches ctrl + backspace case
     while (index > inputText.length) {
       --index;
-      console.log("deleting correct words rn")
     }
 
     if (index >= targetText.length) {
-      console.log("You win");
       programState = "win";
       updateDisplay();
       // TODO: make sure the program is terminating properly
@@ -94,17 +93,16 @@ async function init() {
     render();
   }
 
-  restartButton.addEventListener("click", () => {
+  restartButton.addEventListener("click", async () => {
     programState = "game";
-    resetGame();
+    await resetGame();
     updateDisplay();
-    console.log(index, inputText, "what the fuck is going on");
     // TODO: make sure the program is restarting properly
   });
 
   clickZone.addEventListener("click", () => prompt.focus());
   prompt.addEventListener("input", handleInput);
 
-  resetGame();
+  await resetGame();
   updateDisplay();
 }
