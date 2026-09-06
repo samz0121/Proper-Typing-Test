@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   init();
 });
 
-function init() {
+async function init() {
   console.log('App initialized');
 
   // DOM elements
@@ -17,6 +17,7 @@ function init() {
   const restartButton = document.getElementById("button--restart");
 
   // variables for typing logic
+  const testLength = 20;
   let programState = "game";
 
   let sampleText = "the quick brown fox jumps over the lazy dog";
@@ -32,8 +33,8 @@ function init() {
 
   function updateDisplay() {
     clearDisplay();
-    
-    switch(programState) {
+
+    switch (programState) {
       case "game":
         gameScreen.style.display = "flex";
         break;
@@ -65,7 +66,7 @@ function init() {
     } else {
       upcomingChars = targetText.slice(inputText.length, targetText.length);
     }
-    
+
     display.innerHTML = `<span class="text--correct">${correctChars}</span><span class="text--current">${currentChar}</span><span class="text--wrong">${wrongChars}</span><span class="text--upcoming">${upcomingChars}</span>`;
   }
 
@@ -107,4 +108,8 @@ function init() {
 
   resetGame();
   updateDisplay();
+
+  let test = await makeTest(testLength);
+
+  console.log(test);
 }
