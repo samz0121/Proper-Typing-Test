@@ -3,7 +3,8 @@
 ## In Progress
 - P1: Results Calculation (WPM, ACC, etc.)
 - Bug fixes: 
-    - inputHandling while in win screen
+    - Handle empty word bank case
+    - Disable ctrl c ctrl v
 
 ## Next Up
 - P2: Varied Typing Tests
