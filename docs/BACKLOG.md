@@ -2,6 +2,8 @@
 
 ## In Progress
 - P1: Results Calculation (WPM, ACC, etc.)
+- Bug fixes: 
+    - inputHandling while in win screen
 
 ## Next Up
 - P2: Varied Typing Tests

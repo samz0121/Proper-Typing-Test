@@ -17,7 +17,7 @@ async function init() {
   const restartButton = document.getElementById("button--restart");
 
   // variables for typing logic
-  const testLength = 20;
+  const testLength = 5;
   let programState = "game";
 
   let targetText;
@@ -51,7 +51,9 @@ async function init() {
     // TODO: update targetText to something new
     targetText = await makeTest(testLength);
 
+    prompt.disabled = false;
     prompt.value = "";
+    prompt.focus();
     render();
   }
 
@@ -84,6 +86,7 @@ async function init() {
 
     if (index >= targetText.length) {
       programState = "win";
+      prompt.disabled = true;
       updateDisplay();
       // TODO: make sure the program is terminating properly
     }
@@ -98,6 +101,7 @@ async function init() {
     await resetGame();
     updateDisplay();
     // TODO: make sure the program is restarting properly
+    prompt.focus();
   });
 
   clickZone.addEventListener("click", () => prompt.focus());
