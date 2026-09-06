@@ -14,5 +14,5 @@ async function makeTest(length) {
         targetWords.push(wordBank[randomNum]);
     }
 
-    return targetWords;
+    return targetWords.join(" ");
 }

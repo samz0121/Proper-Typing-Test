@@ -20,8 +20,7 @@ async function init() {
   const testLength = 20;
   let programState = "game";
 
-  let sampleText = "the quick brown fox jumps over the lazy dog";
-  let targetText = sampleText;
+  let targetText = await makeTest(testLength);
   let inputText;
   let index;
 
@@ -108,8 +107,4 @@ async function init() {
 
   resetGame();
   updateDisplay();
-
-  let test = await makeTest(testLength);
-
-  console.log(test);
 }
