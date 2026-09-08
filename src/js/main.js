@@ -73,6 +73,10 @@ async function init() {
   }
 
   function handleInput(e) {
+    if (!running) {
+      startTimer();
+    }
+
     inputText = e.target.value;
 
     if (inputText.slice(0, index + 1) === targetText.slice(0, index + 1)) {
