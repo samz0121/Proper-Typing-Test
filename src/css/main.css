@@ -52,6 +52,11 @@ h1 {
   color: var(--text-colour)
 }
 
+#timer {
+  font-size: 1.5rem;
+  padding: 0.1em 1em 0.1em 1em;
+}
+
 #display {
   font-size: 1.5rem;
   padding: 0.5em 1em 0.5em 1em;
