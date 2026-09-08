@@ -105,6 +105,10 @@ async function init() {
   });
 
   clickZone.addEventListener("click", () => prompt.focus());
+
+  // event listeners for the prompt
+  prompt.addEventListener("paste", e => e.preventDefault());
+  prompt.addEventListener("drop", e => e.preventDefault());
   prompt.addEventListener("input", handleInput);
 
   await resetGame();
