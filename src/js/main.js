@@ -48,7 +48,7 @@ async function init() {
   async function resetGame() {
     index = 0;
     inputText = "";
-    // TODO: update targetText to something new
+    resetTimer();
     targetText = await makeTest(testLength);
 
     prompt.disabled = false;

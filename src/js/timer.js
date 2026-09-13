@@ -9,9 +9,11 @@ function startTimer() {
     timer = setInterval(updateTimer, 10);
 }
 
-function endTimer() {
+function resetTimer() {
     running = false;
     clearInterval(timer);
+    timeElapsed = 0;
+    timerDisplay.textContent = "00:00:00";
 }
 
 function updateTimer() {
