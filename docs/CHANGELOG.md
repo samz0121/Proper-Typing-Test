@@ -40,3 +40,6 @@
 - Added file parsing
 - Fully implemented randomized tests
 - Minor bug fixes & optimization
+
+## 9/13/2026
+- Added the timer
