@@ -22,7 +22,7 @@ async function init() {
   const testTypeDisplay = document.getElementById("test-type");
 
   // variables for typing logic
-  const testLength = 5;
+  const testLength = 20;
   let programState = "game";
 
   let targetText;
