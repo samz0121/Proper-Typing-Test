@@ -16,6 +16,11 @@ async function init() {
   const clickZone = document.getElementById("click-zone");
   const restartButton = document.getElementById("button--restart");
 
+  const wpmDisplay = document.getElementById("wpm");
+  const accDisplay = document.getElementById("acc");
+  const testTimeDisplay = document.getElementById("test-time");
+  const testTypeDisplay = document.getElementById("test-type");
+
   // variables for typing logic
   const testLength = 5;
   let programState = "game";
@@ -48,13 +53,26 @@ async function init() {
   async function resetGame() {
     index = 0;
     inputText = "";
-    resetTimer();
     targetText = await makeTest(testLength);
 
     prompt.disabled = false;
     prompt.value = "";
     prompt.focus();
     render();
+  }
+
+  function initWin() {
+    programState = "win";
+    prompt.disabled = true;
+
+    let wpm = Math.round(calculateWpm());
+    let acc = calculateAcc();
+
+    wpmDisplay.innerHTML = `WPM: ${wpm}`;
+    accDisplay.innerHTML = `ACC: ${acc}`;
+
+    updateDisplay();
+    resetTimer();
   }
 
   function render() {
@@ -83,21 +101,27 @@ async function init() {
       ++index;
     }
 
-    // while also catches ctrl + backspace case
+    // while statement also catches ctrl + backspace case
     while (index > inputText.length) {
       --index;
     }
 
     if (index >= targetText.length) {
-      programState = "win";
-      prompt.disabled = true;
-      updateDisplay();
+      initWin();
       // TODO: make sure the program is terminating properly
     }
 
-    console.log(index, inputText);
-
     render();
+  }
+
+  function calculateWpm() {
+    let minutesElapsed = (timeElapsed / 100) / 60;
+
+    return testLength / minutesElapsed;
+  }
+
+  function calculateAcc() {
+    return 0;
   }
 
   restartButton.addEventListener("click", async () => {

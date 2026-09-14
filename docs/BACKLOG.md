@@ -1,7 +1,7 @@
 # Backlog
 
 ## In Progress
-- P1: Results Calculation (WPM, ACC, etc.)
+- P1: Results Calculation (ACC, etc.)
 - Bug fixes: 
     - Handle empty word bank case
     - Disable ctrl c ctrl v
@@ -17,3 +17,4 @@
 - Basic Text Rendering
 - Basic Page Structure and Styling
 - Handling User Input
+- WPM calculation

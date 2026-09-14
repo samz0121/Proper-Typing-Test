@@ -43,3 +43,4 @@
 
 ## 9/13/2026
 - Added the timer
+- Added wpm counter
