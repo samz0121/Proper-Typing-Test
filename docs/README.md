@@ -2,12 +2,12 @@
 
 ## Overview
 
-Proper Typing Test is a web app that provides tests to measure your typing speed.
+Proper Typing Test is a web app that provides tests to measure your typing speed and accuracy.
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Randomized tests
+- Disallows typing mistakes
 
 ## Tech Stack
 
@@ -17,9 +17,11 @@ Proper Typing Test is a web app that provides tests to measure your typing speed
 
 ## Screenshots
 
-(Add screenshots)
+(WIP)
 
 ## Future Improvements
 
-- [ ]
-- [ ]
+- Different test types varying in: length, difficulty, quotes
+- Quality of life features: live wpm counter, different themes
+- Animation and Sounds
+- Polished feel
